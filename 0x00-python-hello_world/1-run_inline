@@ -2,7 +2,7 @@
 
 PYCODE='
 # Your Python code here
-print("Hello, world!")
+print("Best School: 98")
 '
 
 python3 -c "$PYCODE"
