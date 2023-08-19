@@ -14,5 +14,7 @@ if number < 0:
     last_digit = -last_digit
     comparison = "less than 6 and not 0"
 
-output = "Last digit of {} is {} and is {}".format(number, last_digit, comparison)
+output = "Last digit of {} is {} and is {}".format(
+    number, last_digit, comparison
+)
 print(output)
