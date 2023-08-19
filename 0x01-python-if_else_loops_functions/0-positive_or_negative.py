@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-import numpy as np
+import random
 
-number = np.random.randint(-10, 11)
+number = random.randint(-10, 10)
 
-messages = ["is negative", "is zero", "is positive"]
-index = (number < 0) + (number == 0)
+messages = {
+        True: "is positive",
+        False: "is negative"
+}
 
-print("{:d} {}".format(number, messages[index]))
+print("{:d} {}".format(number, messages[number >= 0]))
