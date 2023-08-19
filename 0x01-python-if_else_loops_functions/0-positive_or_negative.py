@@ -5,6 +5,7 @@ number = random.randint(-10, 10)
 
 messages = {
         True: "is positive",
+        0: "is zero",
         False: "is negative"
 }
 
