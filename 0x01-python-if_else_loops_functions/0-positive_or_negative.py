@@ -9,5 +9,11 @@ message_formats = {
     "negative": "{:d} is negative"
 }
 
-message_key = "positive" if number > 0 else "zero" if number == 0 else "negative"
+if number > 0:
+    message_key = "positive"
+elif number == 0:
+    message_key = "zero"
+else:
+    message_key = "negative"
+
 print(message_formats[message_key].format(number))
