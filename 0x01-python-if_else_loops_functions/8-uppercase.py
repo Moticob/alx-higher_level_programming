@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-def uppercase(s):
-    for c in s:
-        if ord('a') <= ord(c) <= ord('z'):
-            print("{:c}".format(ord(c) - 32), end='')
+def uppercase(str):
+    for i in range(len(str)):
+        if ord(str[i]) >= 97 and ord(str[i]) <= 122:
+            num =32
         else:
-            print("{:c}".format(ord(c)), end='')
+            num = 0
+        print("{:c}".format(ord(str[i]) - num), end='')
     print()
-
-# Test cases
-uppercase("best")
-uppercase("Best School 98 Battery street")
