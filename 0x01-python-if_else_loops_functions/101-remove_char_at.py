@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 
+
 def remove_char_at(str, n):
     if n < 0 or n >= len(str):
-        return str
+        return (str)
 
     result = ""
     for i in range(len(str)):
         if i != n:
             result += str[i]
-    return result
+    return (result)
 
-# Test cases
+
 if __name__ == "__main__":
     print(remove_char_at("Best School", 3))
     print(remove_char_at("Chicago", 2))
