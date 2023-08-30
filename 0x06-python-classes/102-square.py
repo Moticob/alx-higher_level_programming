@@ -21,8 +21,8 @@ class Square:
             TypeError: If size is not a number.
             ValueError: If size is less than 0.
         """
-        self.__size = 0  # Initialize with default value
-        self.size = size  # Use property setter to set the size
+        self.__size = 0
+        self.size = size
 
     @property
     def size(self):
@@ -69,13 +69,13 @@ class Square:
             other (Square): Another Square instance.
 
         Returns:
-            bool: True if the area of self is less than the area of other, False otherwise.
+            bool: True if the area of self is less .
         """
         return self.area() < other.area()
 
     def __le__(self, other):
         """
-        Less than or equal to comparator for square instances based on area.
+        Less than or equal to comparator for square.
 
         Args:
             other (Square): Another Square instance.
@@ -134,7 +134,6 @@ class Square:
         return self.area() >= other.area()
 
 
-# Test the class
 if __name__ == "__main__":
     s_5 = Square(5)
     s_6 = Square(6)
