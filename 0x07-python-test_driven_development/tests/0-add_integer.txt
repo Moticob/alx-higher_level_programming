@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+"""
+Tests for the add_integer function.
+"""
+
+if __name__ == "__main__":
+    import doctest
+    import sys
+    sys.path.append("..")
+    from 0-add_integer import add_integer
+
+    doctest.testmod()
