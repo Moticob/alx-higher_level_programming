@@ -1,0 +1,51 @@
+# Importez la fonction text_indentation depuis votre module ici
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Testez la fonction avec différents exemples
+
+>>> text = "hola.soy oussamix. mi apellido? Oussamix."
+>>> text_indentation(text)
+hola.
+<BLANKLINE>
+soy oussamix.
+<BLANKLINE>
+mi apellido?
+<BLANKLINE>
+Oussamix.
+<BLANKLINE>
+
+>>> text = "hola.soy oussamix: mi apellido? Oussamix."
+>>> text_indentation(text)
+hola.
+<BLANKLINE>
+soy oussamix:
+<BLANKLINE>
+mi apellido?
+<BLANKLINE>
+Oussamix.
+<BLANKLINE>
+
+>>> text = 5
+>>> text_indentation(text)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 5, in text_indentation
+TypeError: text must be a string
+
+>>> text = "5"
+>>> text_indentation(text)
+5
+
+>>> text = "hola.    soy oussamix.   quieres saber mi apellido?  es: Oussamix.   "
+>>> text_indentation(text)
+hola.
+<BLANKLINE>
+soy oussamix.
+<BLANKLINE>
+quieres saber mi apellido?
+<BLANKLINE>
+es:
+<BLANKLINE>
+Oussamix.
+<BLANKLINE>
