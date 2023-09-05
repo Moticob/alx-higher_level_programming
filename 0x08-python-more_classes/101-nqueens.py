@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""
+up
+"""
 import sys
+
 
 def is_safe(board, row, col, n):
     # Check if there is a queen in the same column
@@ -19,10 +23,16 @@ def is_safe(board, row, col, n):
 
     return True
 
+
 def solve_nqueens(n):
     def solve(board, row):
         if row == n:
-            solutions.append([[r, c] for r, row in enumerate(board) for c, cell in enumerate(row) if cell])
+            solutions.append([
+                [r, c]
+                for r, row in enumerate(board)
+                for c, cell in enumerate(row)
+                if cell
+            ])
             return
 
         for col in range(n):
@@ -45,6 +55,7 @@ def solve_nqueens(n):
 
     for solution in solutions:
         print(solution)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
