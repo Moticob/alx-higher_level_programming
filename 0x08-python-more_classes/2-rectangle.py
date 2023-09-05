@@ -6,7 +6,8 @@ Area and Perimeter
 
 class Rectangle:
     """
-    This class defines a rectangle and provides methods for area and perimeter calculation.
+    This class defines a rectangle and provides
+    methods for area and perimeter calculation.
     """
 
     def __init__(self, width=0, height=0):
