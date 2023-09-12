@@ -1,47 +1,23 @@
 #!/usr/bin/python3
-"""up"""
+"""
+    class Square that inherits from Rectangle (9-rectangle.py):
+
+    Instantiation with size: def __init__(self, size)::
+        size must be private. No getter or setter
+        size must be a positive integer, validated by
+        integer_validator
+    the area() method must be implemented
+"""
 
 
-class BaseGeometry:
-    """BaseGeometry class."""
-    def area(self):
-        """Raises Exception: area() is not implemented."""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """Validate 'value': int, positive."""
-        if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-
-
-class Rectangle(BaseGeometry):
-    """Rectangle class, inherits from BaseGeometry."""
-    def __init__(self, width, height):
-        """Initialize Rectangle with width and height."""
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
-
-    def area(self):
-        """Calculate and return the area of the rectangle."""
-        return self.__width * self.__height
-
-    def __str__(self):
-        """Return a string representation of the rectangle."""
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Square class, inherits from Rectangle."""
-    def __init__(self, size):
-        """Initialize Square with size."""
-        self.integer_validator("size", size)
-        self.__size = size
-        super().__init__(size, size)
+    """ class square inherits from rectangle class """
 
-    def __str__(self):
-        """Return a string representation of the square."""
-        return "[Square] {}/{}".format(self.__size, self.__size)
+    def __init__(self, size):
+        """ initializes square """
+        super().integer_validator("size", size)
+        super().__init__(size, size)
+        self.__size = size
