@@ -1,21 +1,18 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
-Module to read and print the content of a text file (UTF8).
+    function that reads a text file (UTF8)
+    and prints it to stdout:
+
+    Prototype: def read_file(filename=""):
+    You must use the with statement
+    You don’t need to manage file permission or
+    file doesn't exist exceptions.
 """
+
 
 def read_file(filename=""):
-    """
-    Reads a text file (UTF8) and prints its content to stdout.
-    
-    Args:
-        filename (str): The name of the file to be read.
-
-    Returns:
-        None
-    """
-    with open(filename, mode='r', encoding='utf-8') as file:
-        for line in file:
-            print(line, end='')
-
-if __name__ == "__main__":
-    read_file("my_file_0.txt")
+    """ read a file """
+    if filename:
+        with open(filename, mode="r", encoding='utf-8') as file:
+            for line in file:
+                print(line, end="")
