@@ -1,13 +1,19 @@
 #!/usr/bin/python3
-"""
-up
+""" Module that contains a function that writes to a text file
 """
 
 
-def number_of_lines(filename=""):
-    """ return the number of lines of a file """
-    i = 0
-    with open(filename, encoding='utf-8') as file:
-        for line in file:
-            i += 1
-    return i
+def write_file(filename="", text=""):
+    """ Function that writes to a text file
+
+    Args:
+        filename: filename
+        text: text to write
+
+    Raises
+        Exception: when the file can be opened
+
+    """
+
+    with open(filename, 'w', encoding="utf-8") as f:
+        return f.write(text)
