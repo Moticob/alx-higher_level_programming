@@ -78,12 +78,12 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """ Display the rectangle using '#' characters """
+        """ Display the rectangle using '#' characters with respect to x and y """
         for _ in range(self.__y):
             print()
         for _ in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
-    
+
     def __str__(self):
         """ Return a string representation of the Rectangle object """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
