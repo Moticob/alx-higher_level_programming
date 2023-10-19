@@ -1,12 +1,3 @@
--- Use the database hbtn_0d_usa
-USE hbtn_0d_usa;
-
--- Find the state_id for California
-SELECT @california_id := id FROM states WHERE name = 'California';
-
--- List all cities of California
-SELECT id, name
-FROM cities
-WHERE state_id = @california_id
-ORDER BY id;
-
+-- lists all the cities of California that can be found in the database hbtn_0d_usa
+-- lists all rows of a column in a database
+SELECT id, name FROM cities WHERE state_id = (SELECT id FROM states WHERE name = 'California') ORDER BY id ASC;
