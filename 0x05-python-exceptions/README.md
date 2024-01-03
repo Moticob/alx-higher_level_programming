@@ -1,1 +1,1 @@
-0x05-python-exceptions
+0x06-python-classes
